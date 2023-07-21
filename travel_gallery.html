@@ -13,6 +13,8 @@
     }
 
     .tz-gallery .thumbnail {
+      height: 300px; /* Adjust this value to your preferred thumbnail height */
+      overflow: hidden;
       padding: 0;
       margin-bottom: 30px;
       background-color: #fff;
@@ -20,6 +22,15 @@
       border: none;
       transition: 0.15s ease-in-out;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .tz-gallery .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      /* Add this property to control the image position */
+      object-position: center bottom; /* Adjust as needed */
     }
 
     .tz-gallery .thumbnail:hover {
@@ -97,8 +108,8 @@
 
             <div data-aos="flip-up" data-aos-delay="80" class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <a class="lightbox" href="gallery/japan.jpg">
-                  <img src="gallery/japan.jpg">
+                <a class="lightbox" href="gallery/ueno.jpg">
+                  <img src="gallery/ueno.jpg">
                 </a>
               </div>
             </div>
@@ -107,7 +118,7 @@
             <div data-aos="flip-up" data-aos-delay="100" class="col-sm-6 col-md-4">
               <div class="thumbnail">
                 <a class="lightbox" href="gallery/hoi_an_night.JPG">
-                  <img src="gallery/brisbane_night.jpg">
+                  <img src="gallery/hoi_an_night.JPG">
                 </a>
               </div>
             </div>
@@ -124,8 +135,8 @@
 
             <div data-aos="flip-up" data-aos-delay="140" class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <a class="lightbox" href="gallery/mt_fuji.jpg">
-                  <img src="gallery/mt_fuji.jpg">
+                <a class="lightbox" href="gallery/mt_fuji_big.jpg">
+                  <img src="gallery/mt_fuji_big.jpg">
                 </a>
               </div>
             </div>

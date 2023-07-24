@@ -67,7 +67,7 @@ span {
   background-image: url("../gallery/vietnam/halongbay.JPG");
   transform: rotateY(288deg) translateZ(430px); }
 .carousel__face:nth-child(10) {
-  background-image: url("../gallery/gold_coast.jpg");
+  background-image: url("../gallery/vietnam/food.jpg");
   transform: rotateY(324deg) translateZ(430px); }
 
 

@@ -40,34 +40,34 @@ span {
 
 
 .carousel__face:nth-child(1) {
-  background-image: url("../gallery/vietnam/hoianbikeride.JPG");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/hoianbikeride.JPG");
   transform: rotateY(  0deg) translateZ(430px); }
 .carousel__face:nth-child(2) { 
-  background-image: url("../gallery/vietnam/hoianbridgejap.jpg");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/hoianbridgejap.jpg");
   transform: rotateY( 36deg) translateZ(430px); }
 .carousel__face:nth-child(3) {
-  background-image: url("../gallery/vietnam/hochiminh.jpg");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/hochiminh.jpg");
   transform: rotateY( 72deg) translateZ(430px); }
 .carousel__face:nth-child(4) {
-  background-image: url("../gallery/vietnam/mudbathsnhatrang.JPG");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/mudbathsnhatrang.JPG");
   transform: rotateY(108deg) translateZ(430px); }
 .carousel__face:nth-child(5) { 
-  background-image: url("../gallery/vietnam/hoiangoldenbridge.jpg");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/hoiangoldenbridge.jpg");
  transform: rotateY(144deg) translateZ(430px); }
 .carousel__face:nth-child(6) { 
-  background-image: url("../gallery/vietnam/langcobeach.jpg");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/langcobeach.jpg");
  transform: rotateY(180deg) translateZ(430px); }
 .carousel__face:nth-child(7) { 
-  background-image: url("../gallery/vietnam/imperialpalacehue.JPG");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/imperialpalacehue.JPG");
  transform: rotateY(216deg) translateZ(430px); }
 .carousel__face:nth-child(8) {
-  background-image: url("../gallery/vietnam/hanoimausoleum.jpg");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/hanoimausoleum.jpg");
   transform: rotateY(252deg) translateZ(430px); }
 .carousel__face:nth-child(9) {
-  background-image: url("../gallery/vietnam/halongbay.JPG");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/halongbay.JPG");
   transform: rotateY(288deg) translateZ(430px); }
 .carousel__face:nth-child(10) {
-  background-image: url("../gallery/vietnam/food.jpg");
+  background-image: url("http://d9iz9rxcn5yew.cloudfront.net/vietnam_highlights/food.jpg");
   transform: rotateY(324deg) translateZ(430px); }
 
 

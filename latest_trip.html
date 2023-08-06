@@ -8,39 +8,6 @@
 </head>
 <body>
   <!-- Add the JavaScript code -->
-  <script>
-    // Initialize the AWS SDK and S3
-    AWS.config.region = 'ap-southeast-2';
-    const s3 = new AWS.S3();
-
-    // Specify the bucket name and object keys for the S3 images
-    const bucketName = 'notion-widgets';
-    const imageKeys = [
-       'notion-widgets/vietnam_highlights/hoianbikeride.JPG',
-       'notion-widgets/vietnam_highlights/hoianbridgejap.jpg',
-       'notion-widgets/vietnam_highlights/hochiminh.jpg',
-       'notion-widgets/vietnam_highlights/mudbathsnhatrang.JPG',
-       'notion-widgets/vietnam_highlights/hoiangoldenbridge.jpg',
-       'notion-widgets/vietnam_highlights/langcobeach.jpg',
-       'notion-widgets/vietnam_highlights/imperialpalacehue.JPG',
-       'notion-widgets/vietnam_highlights/hanoimausoleum.jpg',
-       'notion-widgets/vietnam_highlights/halongbay.JPG',
-       'notion-widgets/vietnam_highlights/food.jpg',
-       // Add more image keys as needed...
-    ];
-
-    // Function to load images into carousel items
-    function loadImages() {
-       for (let i = 0; i < imageKeys.length; i++) {
-          const params = { Bucket: bucketName, Key: imageKeys[i], Expires: 3600 };
-          const presignedUrl = s3.getSignedUrl('getObject', params);
-          document.getElementById('image' + (i + 1)).src = presignedUrl;
-       }
-    }
-
-    // Call the function to load images when the page loads
-    loadImages();
- </script>
   <div class="container">
     <div class="carousel">
       <div class="carousel__face"><span>Vietnam</span></div>

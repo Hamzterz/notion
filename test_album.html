@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        #image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image {
+            max-width: 600px;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Japan Trip Gallery</h1>
+    <div id="image-grid">
+        <!-- Images will be dynamically added here -->
+    </div>
+
+    <script>
+        async function fetchImageUrls() {
+            try {
+                const response = await fetch('https://4ria8i1zrg.execute-api.ap-southeast-2.amazonaws.com/dev', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    mode: 'cors',
+                    body: JSON.stringify({
+                        queryStringParameters: {
+                            folderPath: 'japan/'
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Fetch failed with status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const imageUrls = JSON.parse(data.body);
+
+                return imageUrls;
+            } catch (error) {
+                console.error('Error fetching image URLs:', error);
+                throw error;
+            }
+        }
+
+        async function displayImages() {
+            try {
+                const imageUrls = await fetchImageUrls();
+                const imageGrid = document.getElementById('image-grid');
+                for (const imageUrl of imageUrls) {
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = 'Image';
+                    img.classList.add('image'); // Add the 'image' class
+                    imageGrid.appendChild(img);
+                }
+            } catch (error) {
+                console.error('Error displaying images:', error);
+            }
+        }
+
+        displayImages();
+    </script>
+</body>
+</html>

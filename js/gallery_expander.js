@@ -1,4 +1,13 @@
 
+// Add an event listener to scroll to the cards section when the page loads
+window.addEventListener('load', function() {
+    const cardsSection = document.getElementById('cards-section');
+    if (cardsSection) {
+        cardsSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the cards section
+    }
+});
+
+
 function generateCard(id, imageUrl, title) {
     return `
         <a class="Card" onclick="openGallery(${id})" id="card-${id}">

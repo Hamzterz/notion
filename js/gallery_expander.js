@@ -19,24 +19,25 @@ function generateCard(id, imageUrl, title) {
 function generateCardRow(cards) {
     return `
         <div class="Grid-row">
-        ${cards.map(card => generateCard(card.id, card.primaryImageUrl, card.title)).join("")}
+        ${cards.map(card => generateCard(card.id, card.imageUrls[0], card.title)).join("")}
         </div>
     `;
 }
 
 
 function generateGallery(id, listImagesUrls, primaryImageUrl = null) {
-    const additionalRows = Math.floor((calculateImagesToGrab(listImagesUrls.length) - 3)/ 3);
-    console.log(additionalRows)
+    const additionalRows = Math.floor((calculateImagesToGrab(listImagesUrls.length) - 3) / 3);
 
     // Build the additional sets of gallery images
     let additionalGalleryImages = '';
     for (let i = 1; i <= additionalRows; i++) {
+        const images = listImagesUrls.slice(3 * i, 3 * i + 3).map(imageUrl => `
+            <a href="${imageUrl}" target="_blank" class="Gallery-image" style="background-image: url(${imageUrl})"></a>
+        `).join("");
+
         additionalGalleryImages += `
             <div class="Gallery-images">
-                <div class="Gallery-image" style="background-image: url(${listImagesUrls[3 * i]})"></div>
-                <div class="Gallery-image" style="background-image: url(${listImagesUrls[3 * i + 1]})"></div>
-                <div class="Gallery-image" style="background-image: url(${listImagesUrls[3 * i + 2]})"></div>
+                ${images}
             </div>
         `;
     }
@@ -51,16 +52,19 @@ function generateGallery(id, listImagesUrls, primaryImageUrl = null) {
             <div class="Gallery-images">
                 <!-- This is the left side of the gallery (optional) -->
                 <div class="Gallery-left">
-                    <div class="Gallery-image" style="background-image: url(${listImagesUrls[1]})"></div>
-                    <div class="Gallery-image" style="background-image: url(${listImagesUrls[2]})"></div>
+                    <a href="${listImagesUrls[1]}" target="_blank" class="Gallery-image" style="background-image: url(${listImagesUrls[1]})"></a>
+                    <a href="${listImagesUrls[2]}" target="_blank" class="Gallery-image" style="background-image: url(${listImagesUrls[2]})"></a>
                 </div>
                 <!-- This is the primary (larger) gallery image -->
-                <div class="Gallery-image Gallery-image--primary" style="background-image: url(${primaryImageUrl})"></div>
+                <a href="${primaryImageUrl}" target="_blank" class="Gallery-image Gallery-image--primary" style="background-image: url(${primaryImageUrl})"></a>
             </div>
             ${additionalGalleryImages}
         </section>
     `;
 }
+
+
+
 
 
 

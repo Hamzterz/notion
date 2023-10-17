@@ -108,7 +108,7 @@ function calculateImagesToGrab(totalImages) {
 
 function getTripFolderNames() {
     // Update later to use an API to read all folder names inside s3 folder named trips or something
-    return ['japan', 'vietnam']
+    return ['japan', 'vietnam', 'amsterdam']
 }
 
 
